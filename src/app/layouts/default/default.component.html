@@ -1,8 +1,8 @@
-<app-header></app-header>
+<app-header (click)="sideBarToggle()"></app-header>
 
 <mat-drawer-container>
     <!-- SideBar -->
-    <mat-drawer mode="side" opened>
+    <mat-drawer mode="side" [opened]="sideBarOpen">
         <app-sidebar></app-sidebar>
     </mat-drawer>
     <!-- Displayed Content -->
