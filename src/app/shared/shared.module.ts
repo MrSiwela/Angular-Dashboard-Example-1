@@ -9,8 +9,13 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatListModule } from '@angular/material/list';
+import { MatCardModule } from '@angular/material/card';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { AppRoutingModule } from '../app-routing.module';
+import { AreaChartComponent } from './widgets/area-chart/area-chart.component';
+import { HighchartsChartModule } from 'highcharts-angular';
+import { CardComponent } from './widgets/card/card.component';
+import { PieChartComponent } from './widgets/pie-chart/pie-chart.component';
 
 
 
@@ -18,7 +23,10 @@ import { AppRoutingModule } from '../app-routing.module';
   declarations: [
     HeaderComponent,
     SidebarComponent,
-    FooterComponent
+    FooterComponent,
+    AreaChartComponent,
+    CardComponent,
+    PieChartComponent
   ],
   imports: [
     CommonModule,
@@ -28,14 +36,21 @@ import { AppRoutingModule } from '../app-routing.module';
     MatButtonModule,
     MatMenuModule,
     MatListModule,
+    MatCardModule,
     FlexLayoutModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HighchartsChartModule
   ],
   exports: [
     HeaderComponent,
     SidebarComponent,
     FooterComponent,
-    MatDividerModule
+    MatDividerModule,
+    MatCardModule,
+    AreaChartComponent,
+    FlexLayoutModule,
+    CardComponent,
+    PieChartComponent
   ]
 })
 export class SharedModule { }
