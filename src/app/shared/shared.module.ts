@@ -10,12 +10,15 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
+import { MatTableModule } from '@angular/material/table';
+import {MatPaginatorModule} from '@angular/material/paginator';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { AppRoutingModule } from '../app-routing.module';
 import { AreaChartComponent } from './widgets/area-chart/area-chart.component';
 import { HighchartsChartModule } from 'highcharts-angular';
 import { CardComponent } from './widgets/card/card.component';
 import { PieChartComponent } from './widgets/pie-chart/pie-chart.component';
+import { TableComponent } from './widgets/table/table.component';
 
 
 
@@ -26,7 +29,8 @@ import { PieChartComponent } from './widgets/pie-chart/pie-chart.component';
     FooterComponent,
     AreaChartComponent,
     CardComponent,
-    PieChartComponent
+    PieChartComponent,
+    TableComponent
   ],
   imports: [
     CommonModule,
@@ -37,9 +41,11 @@ import { PieChartComponent } from './widgets/pie-chart/pie-chart.component';
     MatMenuModule,
     MatListModule,
     MatCardModule,
+    MatTableModule,
+    MatPaginatorModule,
     FlexLayoutModule,
     AppRoutingModule,
-    HighchartsChartModule
+    HighchartsChartModule,
   ],
   exports: [
     HeaderComponent,
@@ -47,10 +53,13 @@ import { PieChartComponent } from './widgets/pie-chart/pie-chart.component';
     FooterComponent,
     MatDividerModule,
     MatCardModule,
+    MatTableModule,
+    MatPaginatorModule,
     AreaChartComponent,
     FlexLayoutModule,
     CardComponent,
-    PieChartComponent
+    PieChartComponent,
+    TableComponent
   ]
 })
 export class SharedModule { }
