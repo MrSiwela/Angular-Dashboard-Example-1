@@ -1,1 +1,25 @@
-<p>orders works!</p>
+<div fxLayout="row" fxLaoutAlign="space-between center" fxLayoutGap="20px" class="stats-cards">
+    <mat-card fxFlex="25">
+        <app-widget-card label="Users" total="18K" percentage="50" [data]="cardCharts"></app-widget-card>
+    </mat-card>
+    <mat-card fxFlex="25">
+        <app-widget-card label="Users" total="18K" percentage="50" [data]="cardCharts"></app-widget-card>
+    </mat-card>
+    <mat-card fxFlex="25">
+        <app-widget-card label="Users" total="18K" percentage="50" [data]="cardCharts"></app-widget-card>
+    </mat-card>
+    <mat-card fxFlex="25">
+        <app-widget-card label="Users" total="18K" percentage="50" [data]="cardCharts"></app-widget-card>
+    </mat-card>
+</div>
+
+<br>
+<mat-divider></mat-divider>
+<br>
+
+<div fxLayout="row" fxLaoutAlign="space-between center" fxLayoutGap="20px">
+    <div fxFlex="60">
+        <app-widget-table [data]="tableData"></app-widget-table>
+    </div>
+    <app-widget-pie-chart fxFlex="40" [data]="pieChart"></app-widget-pie-chart>
+</div>

@@ -11,6 +11,9 @@ export class DashboardComponent implements OnInit {
   areaChart: any = [];
   cardCharts: any = [];
   pieChart: any = [];
+  tableData: any = [];
+
+  tableEdit = false;
 
   constructor(private dashboardService: DashboardService) { }
 
@@ -18,6 +21,7 @@ export class DashboardComponent implements OnInit {
     this.areaChart = this.dashboardService.areaChart();
     this.cardCharts = this.dashboardService.cardCharts();
     this.pieChart = this.dashboardService.pieChart();
+    this.tableData = this.dashboardService.table();
   }
 
 }

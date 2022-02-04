@@ -56,6 +56,31 @@ export class DashboardService {
   }]
   }
 
+  table(){
+    return[
+      {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H',edit: true},
+      {position: 2, name: 'Helium', weight: 4.0026, symbol: 'He',edit: true},
+      {position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li',edit: true},
+      {position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be',edit: true},
+      {position: 5, name: 'Boron', weight: 10.811, symbol: 'B',edit: true},
+      {position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C',edit: true},
+      {position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N',edit: true},
+      {position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O',edit: true},
+      {position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F',edit: true},
+      {position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne',edit: true},
+      {position: 11, name: 'Sodium', weight: 22.9897, symbol: 'Na',edit: true},
+      {position: 12, name: 'Magnesium', weight: 24.305, symbol: 'Mg',edit: true},
+      {position: 13, name: 'Aluminum', weight: 26.9815, symbol: 'Al',edit: true},
+      {position: 14, name: 'Silicon', weight: 28.0855, symbol: 'Si',edit: true},
+      {position: 15, name: 'Phosphorus', weight: 30.9738, symbol: 'P',edit: true},
+      {position: 16, name: 'Sulfur', weight: 32.065, symbol: 'S',edit: true},
+      {position: 17, name: 'Chlorine', weight: 35.453, symbol: 'Cl',edit: true},
+      {position: 18, name: 'Argon', weight: 39.948, symbol: 'Ar',edit: true},
+      {position: 19, name: 'Potassium', weight: 39.0983, symbol: 'K',edit: true},
+      {position: 20, name: 'Calcium', weight: 40.078, symbol: 'Ca',edit: true},
+    ];
+  }
+
 
 
 }

@@ -59,7 +59,9 @@ import { TableComponent } from './widgets/table/table.component';
     FlexLayoutModule,
     CardComponent,
     PieChartComponent,
-    TableComponent
+    TableComponent,
+    MatIconModule,
+    MatButtonModule,
   ]
 })
 export class SharedModule { }

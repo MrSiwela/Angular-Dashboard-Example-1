@@ -1,6 +1,8 @@
 import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
+import { DashboardService } from 'src/app/modules/dashboard.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-widget-table',
@@ -8,19 +10,33 @@ import { MatTableDataSource } from '@angular/material/table';
   styleUrls: ['./table.component.scss']
 })
 export class TableComponent implements OnInit {
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
-  dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
+  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol','edit'];
+  
+  @Input() data = [];
+
+  @Input() editable = true;
+
+  tableData: any = [];
+  dataSource: any;
 
   @ViewChild(MatPaginator)
   paginator!: MatPaginator;
 
-  constructor() { }
+  constructor(private dashboardService: DashboardService,private _router: Router) { }
 
   ngOnInit(): void {
+    this.tableData = this.dashboardService.table();
+    //this.dataSource = new MatTableDataSource<PeriodicElement>(this.tableData);
+    this.dataSource = new MatTableDataSource<PeriodicElement>(this.data);
+    if(this.editable == false) this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
   }
 
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
+  }
+
+  navigateToEdit(){
+      this._router.navigate(["products/edit"]);
   }
 
 }

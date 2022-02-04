@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { DefaultComponent } from './layouts/default/default.component';
 import { DashboardComponent } from './modules/dashboard/dashboard.component';
 import { OrdersComponent } from './modules/orders/orders.component';
+import { ProductEditComponent } from './modules/products/product-edit/product-edit.component';
 import { ProductsComponent } from './modules/products/products.component';
 
 const routes: Routes = [
@@ -16,7 +17,13 @@ const routes: Routes = [
       },
       {
         path: 'products',
-        component: ProductsComponent
+        component: ProductsComponent,
+        children: [
+          {
+            path: 'edit',
+            component: ProductEditComponent
+          }
+        ]
       },
       {
         path: 'orders',

@@ -8,6 +8,7 @@ import { ProductsComponent } from 'src/app/modules/products/products.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { OrdersComponent } from 'src/app/modules/orders/orders.component';
 import { DashboardService } from 'src/app/modules/dashboard.service';
+import { ProductEditComponent } from 'src/app/modules/products/product-edit/product-edit.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { DashboardService } from 'src/app/modules/dashboard.service';
     DefaultComponent,
     DashboardComponent,
     ProductsComponent,
-    OrdersComponent
+    OrdersComponent,
+    ProductEditComponent
   ],
   imports: [
     CommonModule,
